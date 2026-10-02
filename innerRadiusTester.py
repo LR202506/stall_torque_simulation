@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from stallTorqueCalc3 import getStallTorquePerMetre, getBucketWallAreaRatio, getIdealNumberOfBuckets
+from stallTorqueCalc import getStallTorquePerMetre, getBucketWallAreaRatio, getIdealNumberOfBuckets
 
 bucketWallWidth = 0.01 # m
 
@@ -45,7 +45,7 @@ df = pd.DataFrame(data)
 print(df)
 
 # Save the dataset to a .csv file
-csv_filename = "stall_torque_tests_v2/test1.csv"
+csv_filename = "IRTest.csv"
 df.to_csv(csv_filename, index=False)
 print(f"Data successfully saved to '{csv_filename}'")
 

@@ -155,6 +155,8 @@ def getAutoStallTorquePerMetre(wallPathPolar, bucketWallWidth, plotEveryResult=F
 
     Automatically tries different rotations to find the one with highest stall torque
 
+    Also Automatically calculates the ideal number of buckets and prints to console
+
     # Parameters:
         - wallPathPolar (array-like): The shape of the bucket, defined as an array-like
         of points, where each point is in the form (radius from centre, angle 
@@ -169,6 +171,8 @@ def getAutoStallTorquePerMetre(wallPathPolar, bucketWallWidth, plotEveryResult=F
         """
 
     numberOfBuckets = getIdealNumberOfBuckets(wallPathPolar, bucketWallWidth)
+
+    print(f"Optimal number of buckets = {numberOfBuckets}")
 
     initialRotationArr = np.linspace(0, 2*np.pi, numberOfRotations)
     maxStallTorquePM = 0.0
